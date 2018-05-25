@@ -55,7 +55,7 @@ ROOT_URLCONF = 'blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,5 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'  #网址
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')#文件夹（媒体根目录）路径，BASE_DIR指的是项目文件路径
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
