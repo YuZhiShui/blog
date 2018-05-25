@@ -22,4 +22,6 @@ from myblog import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.blog_page),
+    #path('blog/', include('blog.urls'))大项目还有多个APP时可以这样做，
+    # 要在blog目录下建一个urls.py文件，并且需要导入from django.urls import include, path
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
